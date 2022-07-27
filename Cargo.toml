@@ -1,0 +1,20 @@
+[package]
+name = "wasm-terminal"
+version = "0.1.0"
+edition = "2021"
+authors = ["Artur Hoffsümmer <artur.h.0427@gmail.com>"]
+description = "Terminal"
+license = "MIT/Apache-2.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3.57"
+regex = "1.6.0"
+lazy_static = "1.4.0"
+reqwest = { version = "0.11.11", features = ["blocking"] }
+
+[build]
+target = "wasm32-unknown-unknown"
